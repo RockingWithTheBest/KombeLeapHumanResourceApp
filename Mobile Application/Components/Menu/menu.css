@@ -8,11 +8,9 @@
       position: fixed;
       top: 0;
       width: 90%;
-      max-width: 1200px;
-      border-radius: 0 0 12px 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      z-index: 1000;
       margin: 0 auto;
+      right: -1px;
     }
     
     .logo {
@@ -149,7 +147,7 @@
       .nav-links {
         position: fixed;
         top: 70px;
-        right: -100%;
+        right: -107%;
         flex-direction: column;
         background: linear-gradient(135deg, #1a2a6c, #2c3e50);
         width: 85%;
