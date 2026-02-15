@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Policy Chatbot</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== CHAT WINDOW ===== */
+    .chatbot-container {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100%;
+      max-height: 600px;
+    }
+    
+    .chatbot-header {
+      background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .chatbot-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .chatbot-messages {
+      padding: 20px;
+      flex: 1;
+      overflow-y: auto;
+      background: #f8f9fc;
+    }
+    
+    .answer-bubble {
+      background: #2c3e50;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 18px 18px 6px 18px;
+      margin: 16px 0;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    
+    .question-bubble {
+      background: #e3f2fd;
+      color: #1a237e;
+      padding: 14px 18px;
+      border-radius: 18px 18px 18px 6px;
+      margin: 12px 0;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    
+    .question-bubble:hover {
+      background: #bbdefb;
+      transform: translateX(4px);
+    }
+    
+    .chatbot-footer {
+      padding: 15px 20px;
+      background: #eef2f7;
+      font-size: 0.8rem;
+      color: #546e7a;
+      border-top: 1px solid #d6d9e0;
+      text-align: center;
+    }
+    
+    .policy-badge {
+      display: inline-block;
+      background: #ffc107;
+      color: #5d4037;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
+
+    /* Scrollbar styling */
+    .chatbot-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+    .chatbot-messages::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    .chatbot-messages::-webkit-scrollbar-thumb {
+      background: #c1c7d0;
+      border-radius: 10px;
+    }
+    .chatbot-messages::-webkit-scrollbar-thumb:hover {
+      background: #a8b0b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <div class="chatbot-title">🚗 Vehicle Policy Assistant</div>
+    </div>
+    
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="answer-bubble">
+        Hello! I'm your Kombz Leap vehicle policy assistant. Tap any question below to learn about our vehicle usage rules:
+      </div>
+      
+      <div class="question-bubble" data-q="1">👤 Who can drive company vehicles?</div>
+      <div class="question-bubble" data-q="2">📍 What trips are allowed?</div>
+      <div class="question-bubble" data-q="3">🔧 What are my vehicle care responsibilities?</div>
+      <div class="question-bubble" data-q="4">⛽ What are my fuel management duties?</div>
+      <div class="question-bubble" data-q="5">📝 What trip records must I keep?</div>
+      <div class="question-bubble" data-q="6">⚠️ What to do in case of an accident?</div>
+      <div class="question-bubble" data-q="7">🚦 What driving conduct is required?</div>
+      <div class="question-bubble" data-q="8">⚠️ What happens if I violate the policy?</div>
+      <div class="question-bubble" data-q="9">🔄 Can the company take back my vehicle?</div>
+    </div>
+    
+    <div class="chatbot-footer">
+      Policy effective: 22 October 2025<br>
+      Kombz Leap Enterprises Ltd
+      <div class="policy-badge">Official Company Policy</div>
+    </div>
+  </div>
+
+  <script>
+    // Policy Q&A data (extracted from your document)
+    const policyQA = {
+      1: "Only personnel officially assigned by management who hold a valid driver's license may drive company vehicles. No unauthorized persons (including friends or relatives) may drive without written approval from management.",
+      2: "Company vehicles are strictly for official business and operational duties. Limited daily commuting (home to work and back) is permitted. Personal trips or errands unrelated to company business are prohibited unless authorized by management.",
+      3: "You must maintain the vehicle in a clean, neat, and tidy condition. Perform routine checks (oil, water, tyres, and lights) regularly. Park the vehicle securely when not in use.",
+      4: "Fuel planning, monitoring, and responsible consumption are your sole responsibility. The company provides fuel allocations strictly for business use and permitted commuting. Fuel misuse, wastage, or fueling private/non-company vehicles is strictly prohibited.",
+      5: "You must record every trip in the trip logbook including: date and time, destination, purpose of travel, and odometer readings (departure and return). Failure to maintain accurate records may result in disciplinary action or withdrawal of vehicle privileges.",
+      6: "Report any accident, breakage, suspicious mechanical fault, or incident immediately to the Director of Sales and Operations. Submit a written statement where required. Delayed or unreported incidents will be treated as negligence.",
+      7: "Strictly follow all traffic laws and safety regulations. Reckless driving, speeding, or driving under the influence of alcohol/drugs is strictly prohibited. Traffic fines arising from your negligence will be borne by you.",
+      8: "Consequences depend on severity:<br>• Minor non-compliance (first occurrence): Verbal warning<br>• Repeated/moderate misuse: Written warning + possible suspension<br>• Serious misconduct/negligence/fuel abuse: Immediate vehicle withdrawal + disciplinary action up to termination<br>The company reserves the right to recover costs from abuse or negligence.",
+      9: "Yes. Kombz Leap Enterprises Ltd may revoke or reassign any vehicle at any time based on misuse, operational changes, or company needs."
+    };
+
+    // Handle question clicks
+    document.querySelectorAll('.question-bubble').forEach(q => {
+      q.addEventListener('click', () => {
+        const qId = q.getAttribute('data-q');
+        const answer = policyQA[qId];
+        
+        // Add question to chat
+        const qBubble = document.createElement('div');
+        qBubble.className = 'question-bubble';
+        qBubble.style.background = '#bbdefb';
+        qBubble.style.marginLeft = 'auto';
+        qBubble.style.borderRadius = '18px 18px 6px 18px';
+        qBubble.style.cursor = 'default';
+        qBubble.innerHTML = q.textContent;
+        document.getElementById('chatMessages').appendChild(qBubble);
+        
+        // Add answer after short delay
+        setTimeout(() => {
+          const aBubble = document.createElement('div');
+          aBubble.className = 'answer-bubble';
+          aBubble.innerHTML = answer;
+          document.getElementById('chatMessages').appendChild(aBubble);
+          
+          // Auto-scroll to bottom
+          const chat = document.getElementById('chatMessages');
+          chat.scrollTop = chat.scrollHeight;
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

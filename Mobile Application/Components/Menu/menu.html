@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="./menu.css">
+  <title>My Website</title>
+  <style>
+   
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      padding-top: 70px; /* Prevent content hiding under fixed nav */
+    }
+    
+    /* ===== NAVIGATION BAR ===== */
+    
+  </style>
+</head>
+<body>
+  <!-- ===== NAVIGATION MENU ===== -->
+  <nav class="navbar">
+    <a href="#" class="logo">Site<span>Name</span></a>
+    
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="dropdown">
+        <a href="#services">Services ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="#web">Web Development</a></li>
+          <li><a href="#design">UI/UX Design</a></li>
+          <li><a href="#seo">SEO Optimization</a></li>
+        </ul>
+      </li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PAGE CONTENT (for demonstration) ===== -->
+  <main class="content">
+    <h1>Responsive Navigation Menu</h1>
+    <p>✨ Clean design • Mobile-friendly • Accessible • Easy to customize</p>
+    <p>Resize your browser window to see the mobile menu in action!</p>
+  </main>
+
+  <script src="./menu.js"></script>
+</body>
+</html>
