@@ -56,8 +56,12 @@ iframe#sectionOneFrame {
     margin-top: 76px;
 }
 
-#sectionOneFrame, #sectionTwoFrame, #sectionThreeFrame{
+#sectionOneFrame, #footer,#sectionTwoFrame, #sectionThreeFrame{
     border: none;
+}
+
+iframe#footer {
+    height: 150vh;
 }
 
 .sections-arrangment {
