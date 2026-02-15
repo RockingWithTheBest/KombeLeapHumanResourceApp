@@ -1,4 +1,6 @@
-
+body {
+    margin: 0px;
+}
 .iframe-container {
     width: 100%;
     position: relative;
@@ -52,6 +54,10 @@
 
 iframe#sectionOneFrame {
     margin-top: 76px;
+}
+
+#sectionOneFrame, #sectionTwoFrame, #sectionThreeFrame{
+    border: none;
 }
 
 .sections-arrangment {
