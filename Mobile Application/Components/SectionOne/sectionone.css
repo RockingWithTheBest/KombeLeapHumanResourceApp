@@ -1,0 +1,250 @@
+:root {
+    /* Brand Colors based on Logo & Documents */
+    --primary-green: #1B5E3F;      /* Dark Forest Green */
+    --secondary-green: #6bab8d;    /* Your original green */
+    --accent-green: #4CAF50;       /* Bright Flame Green */
+    --text-white: #ffffff;
+    --text-off-white: #f0f0f0;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.section-one {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    padding: 99px;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    color: var(--text-white);
+     min-height: 80vh; 
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0%, transparent 20%),
+                      radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 20%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    animation: fadeInUp 1s ease;
+}
+
+h1.headline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h2.sub-headline {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--text-off-white);
+    margin-bottom: 50px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    animation: fadeIn 0.3s ease;
+}
+
+.about-us h2, .our-vision h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent-green);
+    border-bottom: 2px solid var(--glass-border);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.about-us p, .our-vision p {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: var(--text-off-white);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1060px){
+    h1.headline {
+        font-size: 2.2rem;
+        margin-bottom: 0px;
+    }
+
+    h2.sub-headline {
+        font-size: 1.2rem;
+        margin-bottom: 7px;
+    }
+}
+
+@media (max-width: 970px){
+    .section-one {
+        padding: 39px;
+        min-height: 66vh;
+    }
+
+    .about-us h2, .our-vision h2 {
+        font-size: 1.2rem;
+    }
+    .about-us p, .our-vision p {
+        font-size: 1.0rem;
+    }
+
+    .content-wrapper {
+        gap: 29px;
+    }
+}
+
+@media (max-width: 824px){
+    .card {
+        padding: 15px;
+    }
+    .section-one {
+        min-height: 52vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+    
+    .sub-headline {
+        font-size: 1.2rem;
+    }
+
+    .section-one {
+        padding: 80px 20px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 390px){
+    h1.headline {
+        font-size: 2.0rem;
+    }
+    h2.sub-headline {
+        font-size: 1.0rem;
+        margin-bottom: -2px;
+    }
+}
+
+@media (max-width: 346px){
+    h1.headline {
+        font-size: 1.4rem;
+    }
+
+    h2.sub-headline {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+    .about-us p, .our-vision p {
+        font-size: 0.9rem;
+    }
+
+    .about-us h2, .our-vision h2 {
+        font-size: 1.0rem;
+    }
+
+    .section-one {
+        padding: 38px 27px;
+    }
+}
+
+
+@media (max-width: 336px){
+    .card {
+        padding: 8px; 
+        /* width: 82%;  */
+    }
+    .about-us p, .our-vision p {
+        font-size: 0.8rem;
+    }
+    .about-us h2, .our-vision h2 {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 304px){
+    .card {
+            padding: 8px;
+            width: 82%;
+    }
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+    }
+}
+ 

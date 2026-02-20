@@ -22,7 +22,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #4da6ff, #1a2a6c, #4da6ff);
+            background: linear-gradient(90deg, #50ff4d, #236c1a, #4dff63)
             z-index: 1;
         }
 
@@ -60,7 +60,7 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: #4da6ff;
+            background: #05b305;
         }
 
         /* ===== CONTACT INFO STYLING ===== */
@@ -88,7 +88,7 @@
         .contact-icon {
             width: 28px;
             height: 28px;
-            background: linear-gradient(135deg, #4da6ff, #1a2a6c);
+            background: linear-gradient(135deg, #4dff85, #1a6c2f);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -105,12 +105,12 @@
         }
 
         .contact-item:hover .contact-text {
-            color: #4da6ff;
+            color: #05b305;
         }
 
         .contact-item:hover .contact-icon {
             transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(77, 255, 124, 0.3);
         }
 
         /* Email & Phone Links */
@@ -123,7 +123,7 @@
         }
 
         .contact-text a:hover {
-            color: #4da6ff;
+            color: #50ff4d;
             text-decoration: underline;
         }
 
@@ -137,7 +137,7 @@
         }
 
         .working-hours i, .company-info i {
-            color: #4da6ff;
+            color: #05b305;
             font-size: 16px;
         }
 
@@ -165,7 +165,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 3px solid #4da6ff;
+            border: 3px solid #05b305;
             object-fit: cover;
             transition: all 0.4s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -173,7 +173,7 @@
 
         img.benclyde-img:hover {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 6px 20px rgba(77, 166, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(77, 255, 95, 0.4);
         }
 
         .product-bc {
@@ -184,7 +184,7 @@
         }
 
         .benclyde-brand:hover .product-bc {
-            color: #4da6ff;
+            color: #05b305;
         }
 
         /* ===== COPYRIGHT BAR ===== */
@@ -224,15 +224,15 @@
         }
 
         .social-link:hover {
-            background: #4da6ff;
+            background: #05b305;
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(77, 166, 255, 0.4);
+            box-shadow: 0 6px 15px rgba(77, 255, 104, 0.4);
         }
 
-        .social-link.facebook:hover { background: #3b5998; }
-        .social-link.twitter:hover { background: #1da1f2; }
-        .social-link.instagram:hover { background: #e1306c; }
-        .social-link.linkedin:hover { background: #0077b5; }
+        .social-link.facebook:hover { background: #05b305; }
+        .social-link.twitter:hover { background: #05b305; }
+        .social-link.instagram:hover { background: #05b305; }
+        .social-link.linkedin:hover { background: #05b305; }
 
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
@@ -352,7 +352,7 @@
             bottom: 0;
             width: 0;
             height: 2px;
-            background: #4da6ff;
+            background: #4dff53;
             transition: width 0.3s ease;
         }
 

@@ -1,5 +1,5 @@
 .navbar {
-      background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+      background: linear-gradient(135deg, #181818e6, #2c3e50);
       color: white;
       padding: 1rem 5%;
       display: flex;
@@ -11,12 +11,13 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       margin: 0 auto;
       right: -1px;
+      font-family: Roboto;
     }
     
     .logo {
       font-size: 1.8rem;
       font-weight: 700;
-      color: #4da6ff;
+      color: white;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -70,7 +71,7 @@
     }
     
     .nav-links .active {
-      color: #4da6ff;
+      color: #009d00;
       font-weight: 600;
     }
     
