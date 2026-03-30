@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.code-of-conduct {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.code-of-conduct h2{
+    font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2f3236;
+}
+
+.code-of-conduct .intro{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.code-of-conduct .core-values {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.code-of-conduct .value {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 280px;
+  text-align: center;
+}
+
+.value h3 {
+  color: #0a7041;
+  margin-bottom: 0.5rem;
+}
+
+a.btn-primary {
+    display: inline-block;
+    background-color: #3f4347;
+    color: white;
+    border-radius: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #6bab8d;
+}

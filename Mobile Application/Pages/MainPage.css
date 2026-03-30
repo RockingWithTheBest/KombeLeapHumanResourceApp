@@ -54,11 +54,15 @@ body {
     align-items: center;
   }
 
-  iframe#sectionOneFrame {
+iframe#sectionOneFrame {
     margin-top: 76px;
     height: 100vh;
 }
 
+iframe#sectionTwoFrame {
+    height: 54vh;
+    margin-top: -192px;
+}
 
 #sectionOneFrame, #footer,#sectionTwoFrame, #sectionThreeFrame{
     border: none;
