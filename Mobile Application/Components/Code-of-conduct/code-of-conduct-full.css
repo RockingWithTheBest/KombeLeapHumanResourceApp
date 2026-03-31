@@ -198,13 +198,10 @@ body{
     text-decoration: none;
     font-size: 1.5rem;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.back-to-top.show {
-    opacity: 1;
-}
 
 .back-to-top:hover {
     background-color: #1c2229;

@@ -61,7 +61,7 @@ iframe#sectionOneFrame {
 
 iframe#sectionTwoFrame {
     height: 54vh;
-    margin-top: -192px;
+    margin-top: -224px;
 }
 
 #sectionOneFrame, #footer,#sectionTwoFrame, #sectionThreeFrame{
@@ -123,7 +123,39 @@ iframe#footer {
     border: none;
 }
 
-   /* Responsive adjustments */
+/* Responsive adjustments */
+@media (max-width: 1190px){
+    iframe#sectionTwoFrame {
+        margin-top: -106px;
+    }
+}
+
+@media (max-width: 1060px){
+    iframe#sectionTwoFrame {
+        margin-top: -165px;
+    }
+}
+
+@media (max-width: 970px){
+    iframe#sectionTwoFrame {
+        margin-top: -282px;
+    }
+}
+
+@media (max-width: 942px){
+    iframe#sectionTwoFrame {
+        height: 60vh;
+        margin-top: -282px;
+    }
+}
+
+@media (max-width: 824px){
+    iframe#sectionTwoFrame {
+        margin-top: -400px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .sections-arrangment {
         margin-top: -9px;
@@ -144,23 +176,49 @@ iframe#footer {
     }
             
     #sectionOneFrame,
-    #sectionTwoFrame,
     #sectionThreeFrame {
         height: 500px;
         margin: 15px 0;
         }
+    
+    iframe#sectionTwoFrame {
+        margin-top: -319px;
     }
-        
-    @media (max-width: 480px) {
+}
+ 
+@media (max-width: 669px) {    
+    iframe#sectionTwoFrame {
+        margin-top: -172px;
+    }
+
+    iframe#sectionTwoFrame {
+        height: 88vh;
+    }
+
+}
+
+@media (max-width: 515px){
+    iframe#sectionTwoFrame {
+        height: 91vh;
+    }
+}
+
+
+@media (max-width: 480px) {
         #sectionOneFrame,
-        #sectionTwoFrame,
         #sectionThreeFrame {
             height: 400px;
         }
+}
+
+@media (max-width: 452px) {
+    iframe#sectionTwoFrame {
+        margin-top: -87px;
     }
+}
 
   /* Responsive adjustments */
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .chatbot-float-btn {
       width: 55px;
       height: 55px;
@@ -170,6 +228,32 @@ iframe#footer {
       width: 95%;
       height: 80vh;
     }
-  }
+}
 
 
+@media (max-width: 363px){
+    iframe#sectionTwoFrame {
+        margin-top: -16px;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 354px){
+    iframe#sectionTwoFrame {
+        margin-top: -16px;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 346px){
+    iframe#sectionTwoFrame {
+        margin-top: -199px;
+    }
+}
+
+
+@media (max-width: 336px){
+    iframe#sectionTwoFrame {
+        margin-top: -306px;
+    }
+}

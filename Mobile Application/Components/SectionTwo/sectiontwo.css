@@ -58,3 +58,67 @@ a.btn-primary {
 .btn-primary:hover {
   background-color: #6bab8d;
 }
+
+@media (max-width: 942px){
+  .code-of-conduct h2 {
+      font-size: 1.3rem;
+  }
+
+  .code-of-conduct .intro {
+      font-size: 1rem;
+  }
+
+  a.btn-primary {
+      font-size: 13px;
+  }
+}
+
+
+@media (max-width: 669px) {    
+    .code-of-conduct h2 {
+        font-size: 1rem;
+    }
+
+    .code-of-conduct .core-values {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .code-of-conduct .value {
+      width: 497px;
+  }
+}
+
+@media (max-width: 515px){
+    .code-of-conduct h2 {
+        font-size: 1.5rem;
+    }
+
+    .code-of-conduct .value {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 313px){
+    .code-of-conduct .value {
+        width: 255px;
+    }
+
+    .value h3{
+      font-size: 16px;
+    }
+    
+    .value p{
+      font-size: 14px;
+    }
+
+    .code-of-conduct .intro {
+        font-size: 14px;
+    }
+    .code-of-conduct h2 {
+        font-size: 19px;
+    }
+}

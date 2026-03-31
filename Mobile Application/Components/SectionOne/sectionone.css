@@ -196,6 +196,12 @@ h2.sub-headline {
     }
 }
 
+@media (max-width: 354px){
+    .section-one {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 346px){
     h1.headline {
         font-size: 1.4rem;
@@ -215,6 +221,7 @@ h2.sub-headline {
 
     .section-one {
         padding: 38px 27px;
+        height: 78vh;
     }
 }
 
@@ -229,6 +236,10 @@ h2.sub-headline {
     }
     .about-us h2, .our-vision h2 {
         font-size: 0.8rem;
+    }
+
+    .section-one {
+        height: 65vh;
     }
 }
 
