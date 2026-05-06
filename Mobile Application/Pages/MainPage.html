@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="./MainPage.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div class="main-content">
+        <iframe src="../Components/Menu/menu.html" class="chatbot-iframe" id="menuFrame"  
+          ></iframe>
+        <div class="sections-arrangment">
+          <!-- Section One -->
+          <iframe src="../Components/SectionOne/sectionone.html" 
+              class="iframe-section-one" 
+              id="sectionOneFrame"></iframe>
+              
+          <!-- Section Two  -->
+          <iframe src="../Components/SectionTwo/sectiontwo.html" 
+              class="iframe-section" 
+              id="sectionTwoFrame"></iframe>
+              
+          <!-- Section Three -->
+          <iframe src="../Components/SectionThree/sectionthree.html" 
+              class="iframe-section" 
+              id="sectionThreeFrame"></iframe>
+          <iframe src="../Components/Footer/footer.html" 
+              class="iframe-section" 
+              id="footer"></iframe>
+        </div>
+            
+    </div>
+
+          <!-- ===== CHATBOT MODAL ===== -->
+    <div class="chatbot-modal" id="chatbotModal">
+      <div class="chatbot-modal-content">
+        <button class="chatbot-modal-close" id="closeChatbot">×</button>
+        <iframe src="chatbot.html" class="chatbot-iframe" id="chatbotFrame"></iframe>
+      </div>
+    </div>
+    <!-- ===== FLOATING CHATBOT BUTTON ===== -->
+    <a href="#" class="chatbot-float-btn" id="openChatbot">
+        💬
+    </a>
+
+    <script>
+      // Open chatbot modal
+      document.getElementById('openChatbot').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('chatbotModal').classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      });
+
+      // Close chatbot modal
+      document.getElementById('closeChatbot').addEventListener('click', function() {
+        document.getElementById('chatbotModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside the chat window
+      document.getElementById('chatbotModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+          this.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Close with ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.getElementById('chatbotModal').classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    </script>  
+    
+</body>
+</html>
