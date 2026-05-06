@@ -1,9 +1,21 @@
+:root {
+    /* Brand Colors based on Logo & Documents */
+    --primary-green: #1B5E3F;      /* Dark Forest Green */
+    --secondary-green: #6bab8d;    /* Your original green */
+    --accent-green: #4CAF50;       /* Bright Flame Green */
+    --text-white: #ffffff;
+    --text-off-white: #f0f0f0;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+
 body {
     margin: 0;
 }
 
 .section-three {
-    background: linear-gradient(135deg, #05915b 0%, #017e31 100%);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
     margin: 0 auto;
     padding: 35px;
     color: white;
@@ -44,6 +56,22 @@ p.title {
     font-weight: bold;
     font-style: italic;
 }
+
+a.services-btn {
+    display: inline-block;
+    background-color: #3f4347;
+    color: white;
+    border-radius: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+.services-btn:hover {
+  background-color: #6bab8d;
+}
+
 
 @media (max-width: 818px){
     .roles {
