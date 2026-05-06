@@ -72,12 +72,6 @@ iframe#footer {
     height: 200vh;
 }
 
-.sections-arrangment {
-    display: flex;
-    flex-direction: column;
-    margin-top: -141px;
-}
-
 .chatbot-modal.active {
     display: flex;
 }
@@ -123,14 +117,14 @@ iframe#footer {
     border: none;
 }
 
-iframe#sectionThreeFrame {
+/*iframe#sectionThreeFrame {
     height: 35vh;
     margin-top: -12px;
 }
 
 
 /* Responsive adjustments */
-@media (max-width: 1190px){
+/*@media (max-width: 1190px){
     iframe#sectionTwoFrame {
         margin-top: -106px;
     }
@@ -185,7 +179,7 @@ iframe#sectionThreeFrame {
         margin-top: -79px;
         margin-bottom: 0px;
     }
-}
+}*/
 @media (max-width: 768px) {
     .sections-arrangment {
         margin-top: -9px;
@@ -216,7 +210,7 @@ iframe#sectionThreeFrame {
     }
 }
  
-@media (max-width: 669px) {    
+/*@media (max-width: 669px) {    
     iframe#sectionTwoFrame {
         margin-top: -172px;
     }
@@ -265,7 +259,7 @@ iframe#sectionThreeFrame {
     iframe#sectionTwoFrame {
         margin-top: -87px;
     }
-}
+}*/
 
   /* Responsive adjustments */
 @media (max-width: 480px) {
@@ -280,7 +274,7 @@ iframe#sectionThreeFrame {
     }
 }
 
-@media (max-width: 398px){
+/*@media (max-width: 398px){
     iframe#sectionThreeFrame {
         height: 81vh;
         margin-top: -17px;
@@ -321,10 +315,10 @@ iframe#sectionThreeFrame {
     }
 }
 
-@media (max-width: 313px){
+ @media (max-width: 313px){
     iframe#sectionThreeFrame {
         height: 82vh;
         margin-top: -79px;
         margin-bottom: 0px;
     }
-}
+} */

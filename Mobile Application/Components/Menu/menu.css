@@ -7,10 +7,9 @@
       align-items: center;
       position: fixed;
       top: 0;
-      width: 90%;
+      width: 100%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       margin: 0 auto;
-      right: -1px;
       font-family: Roboto;
     }
     
