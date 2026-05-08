@@ -59,29 +59,7 @@ a.btn-primary {
   background-color: #6bab8d;
 }
 
-.btn-goback {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-button.services-btn {
-
-}
-
-a.services-btn {
-    color: white;
-    text-decoration: none;
-        background-color: #3f4347;
-    color: white;
-    text-decoration: none;
-    font-size: 21px;
-    width: 163px;
-    height: 49px;
-    border-radius: 13px;
-    margin-bottom: 30px;
-    margin-top: -23px;
-}
 
 @media (max-width: 942px){
   .code-of-conduct h2 {
