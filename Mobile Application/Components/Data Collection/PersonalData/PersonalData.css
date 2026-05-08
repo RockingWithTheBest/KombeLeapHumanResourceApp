@@ -1,8 +1,9 @@
 .employee-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .employee-form img {
@@ -11,3 +12,33 @@
     /* border: 2px solid #10100f; */
     align-items: center;
 }
+
+.responsive-iframe {
+            width: 100%;
+            height: 800px;           /* Fallback height */
+            border: none;
+            display: block;
+        }
+
+        /* For taller forms, increase height on larger screens */
+        @media (min-width: 768px) {
+            .responsive-iframe {
+                height: 1000px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .responsive-iframe {
+                height: 1200px;
+            }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 640px) {
+            .employee-form {
+                padding: 10px;
+            }
+            .responsive-iframe {
+                height: 700px;        /* Slightly shorter on mobile, user can scroll */
+            }
+        }
