@@ -64,13 +64,6 @@ iframe#sectionTwoFrame {
     margin-top: -224px;
 }
 
-#sectionOneFrame, #footer,#sectionTwoFrame, #sectionThreeFrame{
-    border: none;
-}
-
-iframe#footer {
-    height: 200vh;
-}
 
 .chatbot-modal.active {
     display: flex;

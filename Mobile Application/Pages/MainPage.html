@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Components/SectionTwo/sectiontwo.css"/>
     <link rel="stylesheet" href="../Components/SectionThree/sectionthree.css"/>
     <link rel="stylesheet" href="../Components/Footer/footer.css"/>
+    <link rel="stylesheet" href="../Components/EntryGuideSection/entry-guide-section.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -28,6 +29,7 @@
           <ul class="nav-links" id="nav-menu">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#footer">Contact Us</a></li>
             <li class="dropdown">
               <a href="#services">Services ▾</a>
               <ul class="dropdown-content">
@@ -39,12 +41,12 @@
                 <li><a href="#vehiclerepairing">Vehicle Repair</a></li> -->
 
                 <li><a href="#vehiclepolicy">Vehicle Policy</a></li>
-                <li><a href="#codeofconduct">Code of conduct</a></li>
-                <li><a href="#disciplinarycode">Disciplinary code</a></li>
-                <li><a href="#disciplinaryinclusionpolicy">Dsiciplinary inclusion policy</a></li>
+                <li><a href="../Components/Code-of-conduct/code-of-conduct-full.html">Code of conduct</a></li>
+                <li><a href="../Components/DisciplinaryComittee/disciplinarycomittee.html">Disciplinary code</a></li>
+                <li><a href="../Components/Data Collection/PersonalData/PersonalData.html">Employee data entry</a></li>
+                <!-- <li><a href="#disciplinaryinclusionpolicy">Dsiciplinary inclusion policy</a></li> -->
               </ul>
-            </li>
-            <li><a href="#footer">Contact Us</a></li>
+            </li>            
           </ul>
         </nav>
 
@@ -146,15 +148,89 @@
             </div> 
         </div>
         <div class="link-to-form">
-            <a 
-                target="_blank"
-                class="btn-primary"
-                href="../Components/Data Collection/PersonalData/PersonalData.html">
-                Enterthin
-            </a>
+            <div class="entry-guide-section">
+                <div class="guide-header">
+                    <h3><i class="fas fa-clipboard-check"></i> What You Need to Prepare</h3>
+                        <p>Please have the following items ready before you begin. All information 
+                            must match your official documents.</p>
+                        <p>Kombz Leap Enterprises Ltd | HR & Administration</p>
+                </div>
+
+                <div class="guide-grid">
+                    <!-- Card 1: Personal Docs -->
+                    <div class="guide-card">
+                        <div class="icon-box green-bg">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h4>Identity & Legal</h4>
+                        <ul>
+                            <li><strong>NRC Number:</strong> As printed on your card.</li>
+                            <li><strong>Digital Copies:</strong> Clear photos of Front & Back of NRC.</li>
+                            <li><strong>Police Clearance:</strong> Valid certificate file (PDF/JPG).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Financial & Health -->
+                    <div class="guide-card">
+                        <div class="icon-box black-bg">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Benefits & Security</h4>
+                        <ul>
+                            <li><strong>NAPSA Number:</strong> Your Social Security number.</li>
+                            <li><strong>NHIMA Number:</strong> Your health insurance number.</li>
+                            <li><strong>Next of Kin:</strong> Full name and active phone number.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Employment Docs -->
+                    <div class="guide-card">
+                        <div class="icon-box green-bg">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h4>Employment Records</h4>
+                        <ul>
+                            <li><strong>Signed Contract:</strong> The copy you received from HR.</li>
+                            <li><strong>Qualifications:</strong> List of certificates (Grade 12, Diplomas, etc.).</li>
+                            <li><strong>DOB:</strong> Date of birth.</li>
+                            <!-- <li><strong>Passport Photo:</strong> A recent digital headshot.</li> -->
+                        </ul>
+                    </div>
+
+                    <div class="guide-card">
+                        <div class="icon-box green-bg">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h4>Residential Address</h4>
+                        <ul>
+                            <li><strong>Location:</strong> Where you currently live.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="guide-footer">
+                    <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> By submitting this form, you confirm that all details are accurate. 
+                        False information may lead to disciplinary action as per the 
+                        <a href="../Components/DisciplinaryComittee/disciplinarycomittee.html" class="link-text">Disciplinary Code</a>. To go to form tap on the 
+                        <a
+                            target="_blank"
+                            class="link-text"
+                            href="../Components/Data Collection/PersonalData/PersonalData.html">
+                            LINK
+                        </a>.
+                    </p>
+                </div>
+                <!-- <a 
+                    target="_blank"
+                    class="btn-primary"
+                    href="../Components/Data Collection/PersonalData/PersonalData.html">
+                    Click to enter data
+                </a> -->
+            </div>
+
         </div>
 
-        <footer class="footer-container">
+        <div class="footer-container" id="footer">
             <div class="footer-grid">
                 <!-- Contact Section -->
                 <div class="footer-section">
@@ -191,7 +267,7 @@
                 </div>
 
                 <!-- Quick Links Section (Optional but modern) -->
-                <div class="footer-section">
+                <!-- <div class="footer-section">
                     <h3>Quick Links</h3>
                     <div class="contact-info">
                         <div class="contact-item">
@@ -230,9 +306,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-
+                </div> -->
+            
                 <!-- BenClydeTechs Section -->
                 <div class="footer-section">
                     <h3>Powered By</h3>
@@ -266,7 +341,7 @@
                 <p>&copy; 2024 Kombz Leap Enterprises Ltd. All Rights Reserved.</p>
                 <p>Vehicle Policy • Code of Conduct • Privacy Policy</p>
             </div>
-        </footer>            
+        </div>            
     </div>
 
           <!-- ===== CHATBOT MODAL ===== -->
@@ -280,7 +355,7 @@
     <a href="#" class="chatbot-float-btn" id="openChatbot">
         💬
     </a>
-
+    <script src="/Mobile Application/Components/Menu/menu.js"></script>
     <script>
       // Open chatbot modal
       document.getElementById('openChatbot').addEventListener('click', function(e) {
