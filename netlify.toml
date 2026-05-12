@@ -1,4 +1,12 @@
+[build]
+  publish = "Mobile Application/Pages"
+
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/Components/*"
+  to = "/Mobile Application/Components/:splat"
+  status = 200
